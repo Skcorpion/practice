@@ -60,10 +60,12 @@ form {
           transition: all 0.4s ease;
           color: #939393; }
       form ul.form-list li.form-list__row input:focus,
-      form ul.form-list li.form-list__row input:valid {
+      form ul.form-list li.form-list__row input:valid,
+      form ul.form-list li.form-list__row input:invalid {
         /*every time when we focus on input, we affection on label */ }
         form ul.form-list li.form-list__row input:focus + label .content-name,
-        form ul.form-list li.form-list__row input:valid + label .content-name {
+        form ul.form-list li.form-list__row input:valid + label .content-name,
+        form ul.form-list li.form-list__row input:invalid + label .content-name {
           transform: translateY(-150%);
           font-size: 14px;
           color: #5fa8d3; }
