@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #ffffff;
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.showcase {
+    background: linear-gradient(to bottom, rgb(2,6,22), hsl(219,58%,24%)) no-repeat;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    outline: none;
+}
