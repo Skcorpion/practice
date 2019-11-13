@@ -6,54 +6,85 @@
 body {
   height: 60vh;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   font-family: sans-serif; }
 
-.form {
-  position: relative;
-  width: 50%;
-  height: 50px;
-  overflow: hidden; }
-  .form input {
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-    color: #595f6e;
-    border: none;
-    outline: none; }
-  .form label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    border-bottom: 1px solid black; }
-    .form label::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      height: 100%;
+h1 {
+  margin: 20px 0 30px; }
+
+h2 {
+  margin-bottom: 3px; }
+
+form {
+  width: 450px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px; }
+  form ul.form-list {
+    padding-left: 0;
+    list-style: none; }
+    form ul.form-list li.form-list__row {
+      position: relative;
       width: 100%;
-      border-bottom: 3px solid #5fa8d3;
-      transform: translateX(-100%);
-      transition: all 0.3s ease; }
-    .form label .content-name {
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      transition: all 0.3s ease; }
-  .form input:focus,
-  .form input:valid {
-    /*every time when we focus on input, we affection on label */ }
-    .form input:focus + label .content-name,
-    .form input:valid + label .content-name {
-      transform: translateY(-150%);
-      font-size: 14px;
-      color: #5fa8d3; }
-    .form input:focus + label::after,
-    .form input:valid + label::after {
-      transform: translateX(0); }
+      height: 50px;
+      overflow: hidden; }
+      form ul.form-list li.form-list__row input {
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+        border: none;
+        outline: none; }
+      form ul.form-list li.form-list__row label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 2px solid #f0f0f0; }
+        form ul.form-list li.form-list__row label::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1px;
+          height: 100%;
+          width: 100%;
+          border-bottom: 3px solid #5fa8d3;
+          transform: translateX(-101%);
+          transition: all 0.4s ease; }
+        form ul.form-list li.form-list__row label .content-name {
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          transition: all 0.4s ease;
+          color: #939393; }
+      form ul.form-list li.form-list__row input:focus,
+      form ul.form-list li.form-list__row input:valid {
+        /*every time when we focus on input, we affection on label */ }
+        form ul.form-list li.form-list__row input:focus + label .content-name,
+        form ul.form-list li.form-list__row input:valid + label .content-name {
+          transform: translateY(-150%);
+          font-size: 14px;
+          color: #5fa8d3; }
+      form ul.form-list li.form-list__row input:focus + label::after {
+        transform: translateX(0); }
+    form ul.form-list li.form-list__row:last-child {
+      overflow: visible;
+      margin: 5px; }
+
+.button {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  background-color: #2763e6;
+  padding: 12px 25px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s; }
+  .button:hover, .button:active, .button:focus {
+    transform: scale(1.1); }
