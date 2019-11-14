@@ -76,8 +76,7 @@ form {
       }
 
       input:focus,
-      input:valid,
-      input:invalid {
+      input:valid {
         /*every time when we focus on input, we affection on label */
         + label .content-name {
           transform: translateY(-150%);
