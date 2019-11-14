@@ -17,7 +17,7 @@ h2 {
   margin-bottom: 3px; }
 
 form {
-  width: 450px;
+  width: 30%;
   border-radius: 5px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
   padding: 20px; }
@@ -60,10 +60,12 @@ form {
           transition: all 0.4s ease;
           color: #939393; }
       form ul.form-list li.form-list__row input:focus,
-      form ul.form-list li.form-list__row input:valid {
+      form ul.form-list li.form-list__row input:valid,
+      form ul.form-list li.form-list__row input:not(:placeholder-shown) {
         /*every time when we focus on input, we affection on label */ }
         form ul.form-list li.form-list__row input:focus + label .content-name,
-        form ul.form-list li.form-list__row input:valid + label .content-name {
+        form ul.form-list li.form-list__row input:valid + label .content-name,
+        form ul.form-list li.form-list__row input:not(:placeholder-shown) + label .content-name {
           transform: translateY(-150%);
           font-size: 14px;
           color: #5fa8d3; }
@@ -88,3 +90,17 @@ form {
   transition: all 0.2s; }
   .button:hover, .button:active, .button:focus {
     transform: scale(1.1); }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  form {
+    width: 45%; } }
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 65%; } }
+
+@media screen and (max-width: 500px) {
+  h1 {
+    transform: scale(0.7); }
+  form {
+    max-width: 90%; } }

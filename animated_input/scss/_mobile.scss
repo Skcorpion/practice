@@ -1,0 +1,24 @@
+// Desktops & Laptops
+@include mediaLg {
+  form {
+    width: 45%;
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  form {
+    width: 65%;
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  h1 {
+    transform: scale(0.7);
+  }
+  form {
+    max-width: 90%;
+    //margin: 0 auto;
+  }
+}
